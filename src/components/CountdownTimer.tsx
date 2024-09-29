@@ -14,7 +14,7 @@ export const CountdownTimer: React.FC = () => {
 
     const updateCountdown = () => {
       // Define dynamic start and end times
-      const startHour = 10; // 3 PM
+      const startHour = 15; // 3 PM
       const startMinute = 0; // Starting at 0 minutes
       const endHour = 22; // 10 PM
       const endMinute = 0; // Ending at 0 minutes

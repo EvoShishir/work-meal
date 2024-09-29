@@ -1,0 +1,43 @@
+.checkGroup {
+  position: relative;
+  display: flex;
+}
+
+#check {
+  width: 0;
+  height: 0;
+}
+
+#check + label {
+  position: relative;
+  width: 90px;
+  height: 30px;
+  background-color: lavender;
+  border-radius: 20px;
+  transition: all 400ms ease-in-out;
+}
+
+#check:checked + label {
+  background-color: dodgerblue;
+}
+
+#check + label > .toggle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+  background-image: url(https://www.csmbangladesh.com/images/empty-plate.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#check:checked + label > .toggle {
+  left: calc(100% - 45px);
+  background-image: url(https://www.csmbangladesh.com/images/plate.png);
+  transform: translateY(-50%) rotate(90deg);
+}
