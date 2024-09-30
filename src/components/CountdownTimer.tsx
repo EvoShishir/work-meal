@@ -70,7 +70,7 @@ export const CountdownTimer: React.FC = () => {
       {isActive ? (
         <div className="grid grid-flow-col text-center auto-cols-max items-start">
           <div className="flex flex-col rounded-box">
-            <span className="countdown font-mono text-5xl">
+            <span className="countdown font-bold text-5xl">
               <span
                 style={
                   {
@@ -79,11 +79,11 @@ export const CountdownTimer: React.FC = () => {
                 }
               ></span>
             </span>
-            hours
+            <span className="text-slate-400">hours</span>
           </div>
-          <div className="countdown font-mono text-5xl rounded-box">:</div>
+          <div className="countdown font-bold text-5xl rounded-box">:</div>
           <div className="flex flex-col rounded-box">
-            <span className="countdown font-mono text-5xl">
+            <span className="countdown font-bold text-5xl">
               <span
                 style={
                   {
@@ -92,11 +92,11 @@ export const CountdownTimer: React.FC = () => {
                 }
               ></span>
             </span>
-            min
+            <span className="text-slate-400">min</span>
           </div>
-          <div className="countdown font-mono text-5xl rounded-box">:</div>
+          <div className="countdown font-bold text-5xl rounded-box">:</div>
           <div className="flex flex-col rounded-box">
-            <span className="countdown font-mono text-5xl">
+            <span className="countdown font-bold text-5xl">
               <span
                 style={
                   {
@@ -105,13 +105,13 @@ export const CountdownTimer: React.FC = () => {
                 }
               ></span>
             </span>
-            sec
+            <span className="text-slate-400">sec</span>
           </div>
         </div>
       ) : (
         <div className="grid grid-flow-col auto-cols-max">
           <div className="flex flex-col rounded-box">
-            <span className="countdown font-mono text-5xl">
+            <span className="countdown font-bold text-5xl">
               <span
                 style={
                   {
@@ -120,11 +120,11 @@ export const CountdownTimer: React.FC = () => {
                 }
               ></span>
             </span>
-            hours
+            <span className="text-slate-400">hours</span>
           </div>
-          <div className="countdown font-mono text-5xl rounded-box">:</div>
+          <div className="countdown font-bold text-5xl rounded-box">:</div>
           <div className="flex flex-col rounded-box">
-            <span className="countdown font-mono text-5xl">
+            <span className="countdown font-bold text-5xl">
               <span
                 style={
                   {
@@ -133,11 +133,11 @@ export const CountdownTimer: React.FC = () => {
                 }
               ></span>
             </span>
-            hours
+            <span className="text-slate-400">min</span>
           </div>
-          <div className="countdown font-mono text-5xl rounded-box">:</div>
+          <div className="countdown font-bold text-5xl rounded-box">:</div>
           <div className="flex flex-col rounded-box">
-            <span className="countdown font-mono text-5xl">
+            <span className="countdown font-bold text-5xl">
               <span
                 style={
                   {
@@ -146,7 +146,7 @@ export const CountdownTimer: React.FC = () => {
                 }
               ></span>
             </span>
-            hours
+            <span className="text-slate-400">sec</span>
           </div>
         </div>
       )}

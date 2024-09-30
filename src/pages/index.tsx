@@ -4,16 +4,14 @@ import { DM_Sans } from "next/font/google";
 import { CountdownTimer } from "@/components/CountdownTimer";
 import { Calendar } from "@/components/ui/calendar";
 import Status from "@/components/Status";
+import Banner from "@/components/Banner";
 
 export const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function Home() {
   const [isActive, setIsActive] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-
   const [date, setDate] = useState<Date | undefined>(new Date());
-
-  console.log(date);
 
   useEffect(() => {
     setIsMounted(true);
@@ -27,6 +25,10 @@ export default function Home() {
   return (
     <div data-theme="light" className={dmSans.className}>
       <Layout>
+        <div className="grid grid-cols-[2fr_1fr] items-center gap-6 mx-auto max-w-[1347px]">
+          <Banner />
+          <Status isActive={isActive} />
+        </div>
         <CountdownTimer />
         <Calendar
           mode="single"
@@ -34,7 +36,6 @@ export default function Home() {
           onSelect={setDate}
           className="rounded-md border"
         />
-        <Status isActive={isActive} />
       </Layout>
     </div>
   );

@@ -13,14 +13,6 @@ export default function Status({ isActive }: Props) {
   const [isChecked, setIsChecked] = useState(false); // Manage the checkbox state in the parent
   const [isDisabled, setIsDisabled] = useState(true);
 
-  //   useEffect(() => {
-  //     if (isActive) {
-  //       setIsDisabled(false);
-  //     } else {
-  //       setIsDisabled(true);
-  //     }
-  //   }, []);
-
   useEffect(() => {
     setIsDisabled(!isActive); // Only enable when isActive is true
   }, [isActive]);
@@ -31,10 +23,12 @@ export default function Status({ isActive }: Props) {
 
   const decreaseQuantity = () => {
     setQuantity((prev) => Math.max(1, prev - 1));
+    console.log("decrease quantity button clicked");
   };
 
   const increaseQuantity = () => {
     setQuantity((prev) => Math.min(5, prev + 1));
+    console.log("increase quantity button clicked");
   };
 
   const handleSave = () => {
@@ -43,7 +37,7 @@ export default function Status({ isActive }: Props) {
   };
 
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card bg-base-100 w-full shadow-xl">
       <div className="card-body">
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
@@ -78,7 +72,7 @@ export default function Status({ isActive }: Props) {
               variant="outline"
               size="icon"
               onClick={decreaseQuantity}
-              className="w-[18%] h-14 rounded-full bg-blue-500 hover:bg-blue-700 transition-all duration-500 ease-in-out flex items-center justify-center"
+              className="w-[15%] h-14 rounded-full bg-blue-500 hover:bg-blue-700 transition-all duration-500 ease-in-out flex items-center justify-center"
               disabled={isDisabled}
             >
               <span className="text-3xl font-bold text-white">-</span>
@@ -87,14 +81,14 @@ export default function Status({ isActive }: Props) {
               type="text"
               value={quantity}
               readOnly
-              className="text-center text-xl h-14 w-[50%] mx-2"
+              className="text-center text-xl font-semibold h-14 w-[50%] mx-2"
               disabled={isDisabled}
             />
             <Button
               variant="outline"
               size="icon"
               onClick={increaseQuantity}
-              className="w-[18%] h-14 rounded-full bg-blue-500 hover:bg-blue-700 transition-all duration-500 ease-in-out flex items-center justify-center"
+              className="w-[15%] h-14 rounded-full bg-blue-500 hover:bg-blue-700 transition-all duration-500 ease-in-out flex items-center justify-center"
               disabled={isDisabled}
             >
               <span className="text-3xl font-bold text-white">+</span>
