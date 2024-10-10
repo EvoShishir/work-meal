@@ -14,8 +14,6 @@ export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const [date, setDate] = useState<Date | undefined>(new Date());
 
-  console.log(date);
-
   useEffect(() => {
     setIsMounted(true);
     const now = new Date();
