@@ -20,7 +20,7 @@ export default function Navbar({}: Props) {
           <input
             type="text"
             placeholder="Search"
-            className="input input-bordered pl-10 w-32 md:w-auto rounded-3xl"
+            className="input input-bordered pl-10 w-32 md:w-auto rounded-3xl bg-[#F5F7FA]"
           />
         </div>
         <div className="dropdown dropdown-end">

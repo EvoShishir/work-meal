@@ -66,90 +66,92 @@ export const CountdownTimer: React.FC = () => {
   }
 
   return (
-    <div className="text-center">
-      {isActive ? (
-        <div className="grid grid-flow-col text-center auto-cols-max items-start">
-          <div className="flex flex-col rounded-box">
-            <span className="countdown font-bold text-5xl">
-              <span
-                style={
-                  {
-                    "--value": formatTime(timeLeft.hours),
-                  } as React.CSSProperties
-                }
-              ></span>
-            </span>
-            <span className="text-slate-400">hours</span>
-          </div>
-          <div className="countdown font-bold text-5xl rounded-box">:</div>
-          <div className="flex flex-col rounded-box">
-            <span className="countdown font-bold text-5xl">
-              <span
-                style={
-                  {
-                    "--value": formatTime(timeLeft.minutes),
-                  } as React.CSSProperties
-                }
-              ></span>
-            </span>
-            <span className="text-slate-400">min</span>
-          </div>
-          <div className="countdown font-bold text-5xl rounded-box">:</div>
-          <div className="flex flex-col rounded-box">
-            <span className="countdown font-bold text-5xl">
-              <span
-                style={
-                  {
-                    "--value": formatTime(timeLeft.seconds),
-                  } as React.CSSProperties
-                }
-              ></span>
-            </span>
-            <span className="text-slate-400">sec</span>
-          </div>
-        </div>
-      ) : (
-        <div className="grid grid-flow-col auto-cols-max">
-          <div className="flex flex-col rounded-box">
-            <span className="countdown font-bold text-5xl">
-              <span
-                style={
-                  {
-                    "--value": "00",
-                  } as React.CSSProperties
-                }
-              ></span>
-            </span>
-            <span className="text-slate-400">hours</span>
-          </div>
-          <div className="countdown font-bold text-5xl rounded-box">:</div>
-          <div className="flex flex-col rounded-box">
-            <span className="countdown font-bold text-5xl">
-              <span
-                style={
-                  {
-                    "--value": "00",
-                  } as React.CSSProperties
-                }
-              ></span>
-            </span>
-            <span className="text-slate-400">min</span>
-          </div>
-          <div className="countdown font-bold text-5xl rounded-box">:</div>
-          <div className="flex flex-col rounded-box">
-            <span className="countdown font-bold text-5xl">
-              <span
-                style={
-                  {
-                    "--value": "00",
-                  } as React.CSSProperties
-                }
-              ></span>
-            </span>
-            <span className="text-slate-400">sec</span>
-          </div>
-        </div>
-      )}
+    <div className="card bg-base-100 w-full h-full shadow-xl flex justify-center items-center">
+      <div className="grid grid-flow-col text-center auto-cols-max items-start justify-center">
+        {isActive ? (
+          <>
+            <div className="flex flex-col rounded-box">
+              <span className="countdown font-bold text-7xl">
+                <span
+                  style={
+                    {
+                      "--value": formatTime(timeLeft.hours),
+                    } as React.CSSProperties
+                  }
+                ></span>
+              </span>
+              <span className="text-slate-400">hours</span>
+            </div>
+            <div className="countdown font-bold text-7xl rounded-box">:</div>
+            <div className="flex flex-col rounded-box">
+              <span className="countdown font-bold text-7xl">
+                <span
+                  style={
+                    {
+                      "--value": formatTime(timeLeft.minutes),
+                    } as React.CSSProperties
+                  }
+                ></span>
+              </span>
+              <span className="text-slate-400">min</span>
+            </div>
+            <div className="countdown font-bold text-7xl rounded-box">:</div>
+            <div className="flex flex-col rounded-box">
+              <span className="countdown font-bold text-7xl">
+                <span
+                  style={
+                    {
+                      "--value": formatTime(timeLeft.seconds),
+                    } as React.CSSProperties
+                  }
+                ></span>
+              </span>
+              <span className="text-slate-400">sec</span>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex flex-col rounded-box">
+              <span className="countdown font-bold text-7xl">
+                <span
+                  style={
+                    {
+                      "--value": "00",
+                    } as React.CSSProperties
+                  }
+                ></span>
+              </span>
+              <span className="text-slate-400">hours</span>
+            </div>
+            <div className="countdown font-bold text-7xl rounded-box">:</div>
+            <div className="flex flex-col rounded-box">
+              <span className="countdown font-bold text-7xl">
+                <span
+                  style={
+                    {
+                      "--value": "00",
+                    } as React.CSSProperties
+                  }
+                ></span>
+              </span>
+              <span className="text-slate-400">min</span>
+            </div>
+            <div className="countdown font-bold text-7xl rounded-box">:</div>
+            <div className="flex flex-col rounded-box">
+              <span className="countdown font-bold text-7xl">
+                <span
+                  style={
+                    {
+                      "--value": "00",
+                    } as React.CSSProperties
+                  }
+                ></span>
+              </span>
+              <span className="text-slate-400">sec</span>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

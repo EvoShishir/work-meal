@@ -5,8 +5,7 @@ type Props = {};
 export default function Banner({}: Props) {
   return (
     <div className="card bg-base-100 shadow-xl items-center flex-row py-10 px-5 h-full">
-      {/* <div className="relative flex items-center pl-3"> */}
-      <div className="">
+      <div>
         <p className="font-bold text-3xl">Hey Bro!</p>
         <p className="font-bold text-3xl">Ready for lunch tomorrow?</p>
         <br />
@@ -17,7 +16,6 @@ export default function Banner({}: Props) {
       <div className="absolute right-0 bottom-0">
         <img src="/lunch-box.png" alt="A lunch box" />
       </div>
-      {/* </div> */}
     </div>
   );
 }

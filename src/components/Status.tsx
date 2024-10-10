@@ -15,6 +15,7 @@ export default function Status({ isActive }: Props) {
 
   useEffect(() => {
     setIsDisabled(!isActive); // Only enable when isActive is true
+    console.log(isActive);
   }, [isActive]);
 
   const handleCheckboxChange = (checked: boolean) => {

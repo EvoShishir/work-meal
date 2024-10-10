@@ -1,5 +1,7 @@
 import React, { ReactNode } from "react";
 import { CiSearch } from "react-icons/ci";
+import { GiReceiveMoney } from "react-icons/gi";
+import { TiHome } from "react-icons/ti";
 
 type Props = {
   children: ReactNode;
@@ -30,10 +32,14 @@ export default function Sidebar({ children }: Props) {
           </div>
           <ul className="menu text-xl">
             <li>
-              <a>Dashboard</a>
+              <a>
+                <TiHome /> Dashboard
+              </a>
             </li>
             <li>
-              <a>Reports</a>
+              <a>
+                <GiReceiveMoney /> Reports
+              </a>
             </li>
             <li>
               <a>Transactions</a>
